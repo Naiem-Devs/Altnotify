@@ -7,6 +7,8 @@
   }); 
 
 
-
+  AOS.init();
+  const circle = new CircularProgressBar("pie");
+    circle.initial();
  
 })(jQuery);

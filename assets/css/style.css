@@ -113,6 +113,25 @@ li {
    padding-right: 0;
  }
  
+ ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #131d2c;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(151deg, #8512a1, #c05095);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 /* default-css END 
 ================================== */
  
@@ -197,7 +216,10 @@ li {
 } 
 .bar a span:before {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: #fff;bottom: 10px;border-radius: 30px;transition: .3s;} 
 .bar a span:after {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: #fff;bottom: -10px;border-radius: 30px;transition: .3s;}
- 
+ .bar {
+    width: max-content;
+    margin: auto;
+}
 /* humbarger END */
 
 /* mobile-menu START */
@@ -205,7 +227,7 @@ li {
   position: fixed;
   width: 320px;
   height: 100vh;
-  background: #ffffff;
+  background: linear-gradient(151deg, #8512a1, #c05095);
   z-index: 99;
   box-shadow: 0px 0px 9px -1px #737373;
   top: 0;
@@ -229,7 +251,7 @@ li {
 }
 
 .mobile-menu nav ul li a {
-  color: #272835;
+  color: #ffffff;
   font-size: 16px;
   line-height: 40px;
   transition: .3s;
@@ -278,13 +300,12 @@ li {
   position: absolute;
   right: 20px;
   top: 15px;
-  width: 40px;
-  height: 40px;
-  background: #ff4900;
+  width: 45px;
+  height: 45px;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 28px;
   color: #fff;
   box-shadow: 0px 0px 17px -2px #0000004a;
 }
@@ -293,8 +314,7 @@ li {
 
 
 /*hero-area section start  */
-.hero-area {
-}
+.hero-area {}
 
 section {
     margin-bottom: 100px;
@@ -411,6 +431,49 @@ section.ALTCAKE.what .gd_dots {bottom: -120%;opacity: .5;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.rbc-label-start {
+  font-family: fontawesome;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.rbc-center-text {
+  font-family: 'Roboto', 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial;
+  fill: white;
+  font-size: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pie{
     margin: auto;
     position: relative;
@@ -437,8 +500,8 @@ text.pie-text-3 {
     transform: translate(-49px, 85px) rotate(280deg);
 }
 .pie:after {
-    width: 329px;
-    height: 329px;
+    width: 327px;
+    height: 327px;
     content: "";
     position: absolute;
     left: 50%;
@@ -447,6 +510,7 @@ text.pie-text-3 {
     transform: translate(-50%, -50%);
     border: 34px solid #fff;
     z-index: -1;
+    opacity: 0;
 }
 
 .pie svg {
@@ -817,7 +881,15 @@ a.btns:hover:after {
 .road_map {text-align: center;overflow: hidden;position: relative;}
 .TOPOMAP_PATTERN {left: 0;/* width: 100%; */}
 .rode_dots {left: 50%;transform: translateX(-50%);top: 16%;}
-.rd_blk {background: black;padding: 30px 15px;margin-bottom: 30px;height: 225px;box-shadow: 0px 0px 16px 2px hsl(312deg 100% 50% / 45%);max-width: 275px;}
+.rd_blk {background: black;padding: 30px 15px;margin-bottom: 30px;height: 225px;box-shadow: 0px 0px 16px 2px #21262f;max-width: 275px;transition: .3s;}
+
+.rd_blk:hover {
+    box-shadow: 0px 0px 16px 2px hsl(312deg 100% 50% / 45%);
+}
+
+.rd_blk.active {
+    box-shadow: 0px 0px 16px 2px hsl(312deg 100% 50% / 45%);
+}
 
 .rd_blk p {
     font-size: 14px;
